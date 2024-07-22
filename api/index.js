@@ -200,4 +200,8 @@ app.get('/bookings', async (req, res) => {
     res.json(await Booking.find({ user: userData.id }).populate('place'))
 })
 
-app.listen(process.env.API_PORT)
+if(process.env.API_PORT){
+    app.listen(process.env.API_PORT)
+}
+
+module.exports = app;
