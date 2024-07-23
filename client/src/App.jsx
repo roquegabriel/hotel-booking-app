@@ -16,7 +16,6 @@ axios.defaults.baseURL = process.env.BASE_API_URL
 axios.defaults.withCredentials = true
 
 function App() {
-  console.log(process.env.BASE_API_URL)
   return (
     <UserContextProvider>
       <Routes>

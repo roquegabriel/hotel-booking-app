@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from './Image'
 
 export const PlaceImg = ({ place, index = 0,className=null }) => {
     if (!place.photos?.length) {
@@ -8,6 +9,6 @@ export const PlaceImg = ({ place, index = 0,className=null }) => {
         className = 'object-cover aspect-square'
     }
     return (
-            <img src={'http://localhost:4000/uploads/' + place.photos[index]} alt="" className={className} />
+            <Image src={place.photos[index]} alt="" className={className} />
     )
 }
