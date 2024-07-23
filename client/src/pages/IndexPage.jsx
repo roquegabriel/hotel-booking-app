@@ -16,7 +16,7 @@ export default function IndexPage() {
                     <div className="" id={place._id}>
                         <div className="bg-gray-500 rounded-2xl flex mb-2">
                             {place.photos?.[0] && (
-                                <img className="rounded-2xl object-cover aspect-square" src={`${process.env.BASE_API_URL}uploads/${place.photos?.[0]}`} alt="" />
+                                <img className="rounded-2xl object-cover aspect-square" src={`http://localhost:4000/uploads/${place.photos?.[0]}`} alt="" />
                             )}
                         </div>
                         <h3 className="font-semibold leading-4">{place.address}</h3>

@@ -17,8 +17,8 @@ export const PlaceGallery = ({ place }) => {
                     </button>
                 </div>
                 {place?.photos?.length > 0 && place.photos.map(photo =>
-                    <div className='w-2/3' key={photo._id}>
-                        <img src={`${process.env.BASE_API_URL}uploads/${photo}`} alt="" className='object-cover aspect-square' />
+                    <div className='w-2/3' key={photo}>
+                        <img src={`http://localhost:4000/uploads/${photo}`} alt="" className='object-cover aspect-square' />
                     </div>
                 )}
             </div>
