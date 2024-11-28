@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 export default function RegisterPage() {
 
@@ -15,9 +16,13 @@ export default function RegisterPage() {
             await axios.post('/register', {
                 name, email, password
             })
-            alert('Registration successful. Now you can log in')
+            toast.success("Registration successful. Now you can log in!", {
+                position: "top-center",
+            });
         } catch (error) {
-            alert('Registration failed. Please try again later')
+            toast.error("Registration failed!, Please try again later", {
+                position: "top-left"
+            });
         }
 
     }
