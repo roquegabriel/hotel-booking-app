@@ -86,7 +86,7 @@ app.post('/api/login', async (req, res) => {
             res.status(422).json("Password doesn't match")
         }
     } else {
-        res.json('not found')
+        res.status(401).json('Unauthorized')
     }
 })
 
